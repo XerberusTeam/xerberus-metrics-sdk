@@ -1,0 +1,10 @@
+query Tokens($chain: [String], $limit: Int, $offset: Int, $sortBy: String, $sortOrder: String) {
+  tokens(chain: $chain, limit: $limit, offset: $offset, sortBy: $sortBy, sortOrder: $sortOrder) {
+    tokens {
+      symbol
+      address
+      chain
+    }
+    total_count
+  }
+}

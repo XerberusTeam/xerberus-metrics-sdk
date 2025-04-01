@@ -1,0 +1,15 @@
+[project]
+name = "xerberus-metrics-sdk"
+version = "0.1.1"
+description = "SDK to access Xerberus GraphQL metrics API"
+authors = [{ name = "Xerberus- Tomas Barrios", email = "tb@xerberus.io" }]
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.1"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,10 @@
+query TokensBySimilarSymbol($symbol: String!, $limit: Int, $offset: Int, $sortBy: String, $sortOrder: String) {
+  tokensBySimilarSymbol(symbol: $symbol, limit: $limit, offset: $offset, sortBy: $sortBy, sortOrder: $sortOrder) {
+    total_count
+    tokens {
+      symbol
+      address
+      chain
+    }
+  }
+}

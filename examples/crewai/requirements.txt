@@ -1,0 +1,2 @@
+crewai>=0.10.8
+xerberus

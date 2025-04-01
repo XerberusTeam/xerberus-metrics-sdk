@@ -1,0 +1,52 @@
+query Metrics(
+  $partition_date: [String!]!,
+  $address: [String!],
+  $chains: [String],
+  $limit: Int,
+  $offset: Int,
+  $sortBy: String,
+  $sortOrder: String
+) {
+  metrics(
+    partition_date: $partition_date,
+    address: $address,
+    chains: $chains,
+    limit: $limit,
+    offset: $offset,
+    sortBy: $sortBy,
+    sortOrder: $sortOrder
+  ) {
+    total_count
+    current_count
+    metrics {
+      asset_id
+      partition_date
+      typical_price
+      pct_price_change_1D
+      wallet_count
+      wallet_count_change_1D
+      wallet_count_change_7D
+      wallet_count_change_30D
+      wallet_count_change_90D
+      wallet_count_change_365D
+      life_cycle_v1
+      diversity
+      dominance
+      assortativity
+      price_change_7D
+      price_change_30D
+      price_change_90D
+      price_change_180D
+      price_change_365D
+      risk_rating
+      risk_score
+      token {
+        asset_id
+        symbol
+        chain
+        address
+        last_updated
+      }
+    }
+  }
+}

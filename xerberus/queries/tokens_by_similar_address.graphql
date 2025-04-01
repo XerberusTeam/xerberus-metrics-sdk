@@ -1,0 +1,12 @@
+query TokensBySimilarAddress($address: String!, $limit: Int, $offset: Int, $sortBy: String, $sortOrder: String) {
+  tokensBySimilarAddress(address: $address, limit: $limit, offset: $offset, sortBy: $sortBy, sortOrder: $sortOrder) {
+    total_count
+    tokens {
+      asset_id
+      symbol
+      chain
+      address
+      last_updated
+    }
+  }
+}
