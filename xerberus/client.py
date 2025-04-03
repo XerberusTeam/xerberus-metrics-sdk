@@ -8,17 +8,19 @@ def load_query(name):
 
 
 class XerberusMetricsClient:
-    def __init__(self, api_url=None, api_key=None):
+    def __init__(self, api_url=None, api_key=None, api_email=None):
         config = get_config()
         self.api_url = api_url or config["API_URL"]
-        self.api_key = api_key or config["API_KEY"]
+        self.api_key = api_key or config["XERBERUS_API_KEY"]
+        self.api_email = api_email or config["XERBERUS_API_EMAIL"]
 
         if not self.api_key:
             raise ValueError("Missing API key. Please provide it via constructor or set API_KEY in your environment.")
 
         self.headers = {
             "Content-Type": "application/json",
-            "x-api-key": self.api_key
+            "x-api-key": self.api_key,
+            "x-user-email": self.api_email
         }
 
     def metrics_get(

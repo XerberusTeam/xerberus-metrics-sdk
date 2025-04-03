@@ -34,8 +34,8 @@ pip install -e .
 Create a .env file in the root:
 
 ```ini
-API_KEY=your-api-key-here
-
+XERBERUS_API_KEY=your-api-key-here
+XERBERUS_API_EMAIL=your_email@here.com
 ```
 
 ## USAGE

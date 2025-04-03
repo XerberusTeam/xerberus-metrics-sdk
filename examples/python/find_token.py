@@ -4,7 +4,7 @@ from xerberus import XerberusMetricsClient
 
 load_dotenv()
 # Initialize the client (optionally pass api_url if testing locally)
-client = XerberusMetricsClient(api_key=os.getenv("API_KEY"))
+client = XerberusMetricsClient(api_key=os.getenv("XERBERUS_API_KEY"),api_email=os.getenv("XERBERUS_API_EMAIL"))
 
 # -------------------------------
 # Example 1: Search tokens by similar symbol
